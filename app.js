@@ -1,31 +1,9 @@
-﻿document.addEventListener("DOMContentLoaded", function() {
+﻿import { getRarity } from "./rarity-handler-script.js";
+
+document.addEventListener("DOMContentLoaded", function() {
     const rollButton = document.getElementById("roll-button");
     const rarityText = document.getElementById("rarity-text");
-    const chanceText = document.getElementById("chance-text");
     const rollSFX = document.getElementById("roll-sfx");
-
-    function getRarity() {
-        let rarityNumber = Math.random();
-        console.log(rarityNumber);
-
-        if (rarityNumber <= 0.5) {
-            rarityText.style.color = "darkgray";
-            rarityText.innerHTML = "common";
-            chanceText.innerHTML = "50%";
-        } else if (rarityNumber <= 0.75) {
-            rarityText.style.color = "gray";
-            rarityText.innerHTML = "uncommon";
-            chanceText.innerHTML = "25%";
-        } else if (rarityNumber <= 0.875) {
-            rarityText.style.color = "green";
-            rarityText.innerHTML = "rare";
-            chanceText.innerHTML = "12.5%";
-        } else {
-            rarityText.style.color = "blue";
-            rarityText.innerHTML = "very rare";
-            chanceText.innerHTML = "12.5%";
-        }
-    }
 
     rollButton.onclick = function() {
         console.log("Doing a Roll");
