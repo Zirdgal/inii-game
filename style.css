@@ -1,0 +1,43 @@
+﻿body {
+    background-color: black;
+    overflow: hidden;
+    margin: 0;
+}
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.machine {
+    background-color: lightgray;
+    width: 40vw;
+    height: 40vh;
+    padding: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vh;
+    flex-direction: column;
+}
+
+#rarity-text, #chance-text {
+    margin: 0;
+    padding: 0;
+}
+
+#roll-button {
+    font-size: 10vh;
+}
+
+
+
+@keyframes textJump {
+    0% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
