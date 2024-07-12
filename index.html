@@ -7,24 +7,100 @@
     <link rel="stylesheet" href="style.css">
 
     <title>Inii's Crippling Gambling Addiction</title>
+
+    <script src="https://kit.fontawesome.com/fe50138296.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
     <audio id="roll-sfx"><source src="audio/click1.mp3" type="audio/mpeg"></audio>
 
+    <aside class="sidebar">
+        <button class="sidebar-button" id="encyclopedia-button"><i class="fa-solid fa-book-bookmark"></i></button>
+    </aside>
+    <section class="sidebar-overlay" id="sidebar-overlay">
+        <button class="sidebar-top-btn" id="sidebar-close"><i class="fa-solid fa-xmark"></i></button>
+        <button class="sidebar-top-btn" id="sidebar-delete"><i class="fa-solid fa-trash-can"></i></button>
+        <h1>Encyclopedia</h1>
+        <div id="roll-stats-container">
 
+            <div class="encyclopedia-entry">
+                <h3>General Stats:</h3>
+                <div class="encyclopedia-entry-stats">
+                    <p id="roll-count">Total Rolls:</p>
+                </div>
+            </div>
+
+            <div class="encyclopedia-entry">
+                <h3 id="encyclopedia-common-h3">Common</h3>
+                <div class="encyclopedia-entry-stats">
+                    <p id="roll-count-common">Total Rolls:</p>
+                    <p>Rarity: 50%</p>
+                </div>
+            </div>
+
+            <div class="encyclopedia-entry">
+                <h3 id="encyclopedia-uncommon-h3">Uncommon</h3>
+                <div class="encyclopedia-entry-stats">
+                    <p id="roll-count-uncommon">Total Rolls:</p>
+                    <p>Rarity: 25%</p>
+                </div>
+            </div>
+
+            <div class="encyclopedia-entry">
+                <h3 id="encyclopedia-rare-h3">Rare</h3>
+                <div class="encyclopedia-entry-stats">
+                    <p id="roll-count-rare">Total Rolls:</p>
+                    <p>Rarity: 12.5%</p>
+                </div>
+            </div>
+
+            <div class="encyclopedia-entry">
+                <h3 id="encyclopedia-very-rare-h3">Very Rare</h3>
+                <div class="encyclopedia-entry-stats">
+                    <p id="roll-count-very-rare">Total Rolls:</p>
+                    <p>Rarity: 6.25%</p>
+                </div>
+            </div>
+
+            <div class="encyclopedia-entry">
+                <h3 id="encyclopedia-void-h3">Void</h3>
+                <div class="encyclopedia-entry-stats">
+                    <p id="roll-count-void">Total Rolls:</p>
+                    <p>Rarity: 6.25%</p>
+                </div>
+            </div>
+
+            <div class="encyclopedia-entry">
+                <h3 id="encyclopedia-midas-touch-h3">Midas' Touch</h3>
+                <div class="encyclopedia-entry-stats">
+                    <p id="roll-count-midas-touch">Total Rolls:</p>
+                    <p>Rarity: 0.00001%</p>
+                </div>
+            </div>
+
+            <div class="encyclopedia-entry">
+                <h3 id="encyclopedia-the-rarest-h3">The Rarest</h3>
+                <div class="encyclopedia-entry-stats">
+                    <p id="roll-count-the-rarest">Total Rolls:</p>
+                    <p>Rarity: 0.000001%</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
     <section class="container">
-
-        <p id="roll-count">Total Rolls:</p>
 
         <div class="machine" id="rarity-container">
             <h1 id="rarity-text"></h1>
             <p id="chance-text"></p>
         </div>
         <button id="roll-button">Roll</button>
+
+
     </section>
 
     <script type="module" src="app.js"></script>
     <script type="module" src="./scripts/saving-script.js"></script>
+    <script type="module" src="./scripts/sidebar-script.js"></script>
 </body>
 </html>
