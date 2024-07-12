@@ -55,14 +55,14 @@ export function getRarity(isFinal) {
         rarityText.innerHTML = "The Rarest";
         chanceText.innerHTML = "0.000001%";
         if (isFinal === 1) {
-            addRoll(5);
+            addRoll(7);
         };
     }  else {
         rarityText.style.color = "black";
         rarityText.innerHTML = "void";
         chanceText.innerHTML = "6.25%"
         if (isFinal === 1) {
-            addRoll(7);
+            addRoll(5);
         };
     };
 };
