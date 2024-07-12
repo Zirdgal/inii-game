@@ -1,4 +1,5 @@
-﻿import { getRarity } from "./rarity-handler-script.js";
+﻿import { getRarity } from "./scripts/rarity-handler-script.js";
+import { updateSavedState, addRoll } from "./scripts/saving-script.js";
 
 document.addEventListener("DOMContentLoaded", function() {
     const rollButton = document.getElementById("roll-button");
@@ -8,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function() {
     rollButton.onclick = function() {
         console.log("Doing a Roll");
         rollButton.disabled = true;
+
+        addRoll();
+        updateSavedState();
+        console.log(localStorage.getItem("savedRollCount"));
 
         let i = 0;
         let rollSpeed = 0.1;
